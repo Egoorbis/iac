@@ -1,0 +1,42 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "envParameters": {
+            "value": {
+                "subId": "7420011a-d14c-4990-a610-2373dadd1309",
+                "tags": {
+                    "createdBy": "blog",
+                    "environment": "prd",
+                    "managedBy": "bicep"
+                },
+                "environment": "prd",
+                "unit": "it",
+                "location": "westeurope",
+                "service": {
+                    "cloudshell": {
+                        "sku": {
+                            "Name": "Standard_LRS"
+                        },
+                        "kind": "StorageV2",
+                        "tags": {
+                            "ms-resource-usage": "azure-cloud-shell"
+                        },
+                        "properties": {
+                            "minimumTlsVersion": "TLS1_2",
+                            "allowBlobPublicAccess": false,
+                            "supportsHttpsTrafficOnly": true,
+                            "accessTier": "Hot"
+                        }
+                    }
+                }
+            }
+        },
+        "naming":{
+            "value": {
+                "resourceGroup": "rg",
+                "storageAccount": "st"
+            }
+        }
+    }
+}
